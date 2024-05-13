@@ -1,0 +1,22 @@
+name: PR Workflow
+
+on:
+  pull_request:
+    types: [opened, edited, reopened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Update README
+      run: |
+        echo "This is an automated update to the README file." >> README.md
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add README.md
+        git commit -m "Automated update to README"
+        git push
