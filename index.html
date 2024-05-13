@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <button class="poll">Poll Answer</button>
+    <script>
+      // const greet = function (greetings){
+      //   return function (name){
+      //     console.log(`${name} ${greetings}`)
+      //   }
+      // }
+      // greet('hello')('sedhu')
+
+      // const greet = (greetings) =>{
+      //   return (name) =>{
+      //     console.log(`${greetings} ${name}`)
+      //   }
+      // }
+
+    //   const addTax = function(){
+    //     return function(value){
+    //       return value + value * 0.23
+    //   }
+    // }
+    //   const VAT = addTax()
+    //   console.log(VAT(100))
+
+    // const poll = {
+    //   question : 'what is your favourite programming language ?',
+    //   options : ['0: Javascript','1: Python','2: Rust','3: C++'],
+    //   answer: new Array(4).fill(0),
+    //   pollAnswer(){
+    //     const Answer = Number(prompt(`${this.question} \n ${this.options.join('\n')} \n(write option number)`))
+    //     this.answer[Answer]++
+    //     console.log(this.answer)
+    //   },
+    //   displayResult(type){
+    //     if(type === 'array'){
+    //       console.log(this.answer)
+    //     }
+    //     else if(type ==='string'){
+    //       console.log(`poll results are ${this.answer.join(',')}`)
+    //     }
+    //   }
+    // }
+
+    // document.querySelector('.poll').addEventListener('click', poll.pollAnswer.bind(poll))
+    // poll.displayResult.call({answer:[5,2,1]},'string')
+
+    const bookings = function(){
+      let book = 0
+      return function(){
+        book++
+        console.log(book)
+      }
+    }
+
+    bookings()()
+    bookings()( )
+      
+
+    </script>
+</html>
